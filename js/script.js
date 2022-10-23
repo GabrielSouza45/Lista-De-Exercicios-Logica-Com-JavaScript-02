@@ -1,268 +1,269 @@
-// // ------- Exercicio 1 ----------
+// ------- Exercicio 1 ----------
 
-// // Faça um algoritmo que leia a idade de uma pessoa expressa em anos, meses e dias e escreva a idade dessa 
-// // pessoa expressa apenas em dias. Considerar ano com 365 dias e mês com 30 dias. 
-// document.getElementById("resultado").innerHTML = ("");
-// function diasVividos() {
+// Faça um algoritmo que leia a idade de uma pessoa expressa em anos, meses e dias e escreva a idade dessa 
+// pessoa expressa apenas em dias. Considerar ano com 365 dias e mês com 30 dias. 
+document.getElementById("resultado").innerHTML = ("");
 
+function diasVividos() {
 
-//     let diaTotal = 0;
 
-//     let anos = parseInt(prompt("Digite o ano em que nasceu:"));
-//     let meses = parseInt(prompt("Digite o número do mês em que nasceu:"));
-//     let dias = parseInt(prompt("Digite o dia em que nasceu:"));
+    let diaTotal = 0;
 
-//     let dataAtual = new Date();
+    let anos = parseInt(prompt("Digite o ano em que nasceu:"));
+    let meses = parseInt(prompt("Digite o número do mês em que nasceu:"));
+    let dias = parseInt(prompt("Digite o dia em que nasceu:"));
 
-//     let anoAtual = dataAtual.getFullYear();
-//     let mesAtual = dataAtual.getMonth();
-//     let diaAtual = dataAtual.getDate();
+    let dataAtual = new Date();
 
-//     while (anos < anoAtual || meses < mesAtual || dias < diaAtual) {
-//         diaTotal++;
-//         dias++;
-//         if (dias == 30) {
-//             dias = 1;
-//             meses++;
-//             if (meses == 12) {
-//                 meses = 1;
-//                 anos++;
-//             }
-//         }
-//     }
+    let anoAtual = dataAtual.getFullYear();
+    let mesAtual = dataAtual.getMonth();
+    let diaAtual = dataAtual.getDate();
 
-//     document.getElementById("resultado").innerHTML = (diaTotal + " dias vividos.");
+    while (anos < anoAtual || meses < mesAtual || dias < diaAtual) {
+        diaTotal++;
+        dias++;
+        if (dias == 30) {
+            dias = 1;
+            meses++;
+            if (meses == 12) {
+                meses = 1;
+                anos++;
+            }
+        }
+    }
 
-// }
+    document.getElementById("resultado").innerHTML = (diaTotal + " dias vividos.");
 
-// function primeiroExerc() {
-//     alert("Este é o primeiro exercício.");
-// }
+}
 
+function primeiroExerc() {
+    alert("Este é o primeiro exercício.");
+}
 
 
 
 
 
 
-// // ------- Exercicio 2 ----------
 
-// // Escreva um algoritmo para ler o número total de eleitores de um município, o número de votos brancos, nulos e válidos. 
-// // Calcular e escrever o percentual que cada um representa em relação ao total de eleitores.  
+// ------- Exercicio 2 ----------
 
-// function segundo() {
-//     document.getElementById("resultado").innerHTML = ("");
+// Escreva um algoritmo para ler o número total de eleitores de um município, o número de votos brancos, nulos e válidos. 
+// Calcular e escrever o percentual que cada um representa em relação ao total de eleitores.  
 
-//     document.getElementById("anterior").setAttribute('onclick', 'primeiro()');
-//     document.getElementById("proximo").setAttribute('onclick', 'terceiro()');
+function segundo() {
+    document.getElementById("resultado").innerHTML = ("");
 
-//     document.getElementById("titulo-exercicio").innerHTML = "Exercicio 2 - Percentual de Votos";
-//     document.getElementById("texto-exercicio").innerHTML = "Lê votos nulos, brancos e válidos e escreve o percentual de cada eleitor";
+    document.getElementById("anterior").setAttribute('onclick', 'primeiro()');
+    document.getElementById("proximo").setAttribute('onclick', 'terceiro()');
 
-//     document.getElementById("button").setAttribute('onclick', 'votos()');
-// }
+    document.getElementById("titulo-exercicio").innerHTML = "Exercicio 2 - Percentual de Votos";
+    document.getElementById("texto-exercicio").innerHTML = "Lê votos nulos, brancos e válidos e escreve o percentual de cada eleitor";
 
-// function primeiro() {
-//     location.reload(true);
-// }
+    document.getElementById("button").setAttribute('onclick', 'votos()');
+}
 
-// function votos() {
-//     let eleitores = parseInt(prompt("Digite o total de eleitores:"));
-//     let brancos = parseInt(prompt("Digite o total de votos em branco:"));
-//     let nulos = parseInt(prompt("Digite o total de votos nulos:"));
-//     let validos = parseInt(prompt("Digite o total de votos válidos:"));
-//     let verificacao = brancos + nulos + validos;
+function primeiro() {
+    location.reload(true);
+}
 
-//     if (verificacao === eleitores) {
-//         let porcBrancos = brancos * 100 / eleitores;
-//         let porcNulos = nulos * 100 / eleitores;
-//         let porcValidos = validos * 100 / eleitores;
+function votos() {
+    let eleitores = parseInt(prompt("Digite o total de eleitores:"));
+    let brancos = parseInt(prompt("Digite o total de votos em branco:"));
+    let nulos = parseInt(prompt("Digite o total de votos nulos:"));
+    let validos = parseInt(prompt("Digite o total de votos válidos:"));
+    let verificacao = brancos + nulos + validos;
 
-//         document.getElementById("resultado").innerHTML = (`Total de Eleitores: ${eleitores}
-//                                                             Porcentagem de Válidos: ${porcValidos}% total: ${validos} votos 
-//                                                             Porcentagem em Branco: ${porcBrancos}% total: ${brancos} votos
-//                                                             Porcentagem de Nulos: ${porcNulos}% total: ${nulos} votos`);
-//     } else if (verificacao > eleitores) {
-//         alert("Erro: Número de votos maior que número de eleitores.");
-//     } else {
-//         alert("Erro: Número de eleitores maior que número de votos.");
-//     }
+    if (verificacao === eleitores) {
+        let porcBrancos = brancos * 100 / eleitores;
+        let porcNulos = nulos * 100 / eleitores;
+        let porcValidos = validos * 100 / eleitores;
 
-// }
+        document.getElementById("resultado").innerHTML = (`Total de Eleitores: ${eleitores}
+                                                            Porcentagem de Válidos: ${porcValidos}% total: ${validos} votos 
+                                                            Porcentagem em Branco: ${porcBrancos}% total: ${brancos} votos
+                                                            Porcentagem de Nulos: ${porcNulos}% total: ${nulos} votos`);
+    } else if (verificacao > eleitores) {
+        alert("Erro: Número de votos maior que número de eleitores.");
+    } else {
+        alert("Erro: Número de eleitores maior que número de votos.");
+    }
 
+}
 
 
 
 
 
-// // ------- Exercicio 3 ----------
 
-// // Escreva um algoritmo para ler o salário mensal atual de um funcionário
-// // e o percentual de reajuste. Calcular e escrever o valor do novo salário.
+// ------- Exercicio 3 ----------
 
-// function terceiro() {
-//     document.getElementById("resultado").innerHTML = ("");
+// Escreva um algoritmo para ler o salário mensal atual de um funcionário
+// e o percentual de reajuste. Calcular e escrever o valor do novo salário.
 
-//     document.getElementById("anterior").setAttribute('onclick', 'segundo()');
-//     document.getElementById("proximo").setAttribute('onclick', 'quarto()');
+function terceiro() {
+    document.getElementById("resultado").innerHTML = ("");
 
-//     document.getElementById("titulo-exercicio").innerHTML = "Exercicio 3 - Reajuste Salarial";
-//     document.getElementById("texto-exercicio").innerHTML = "Lê o salário atual e o reajuste, e exibe o novo salário.";
+    document.getElementById("anterior").setAttribute('onclick', 'segundo()');
+    document.getElementById("proximo").setAttribute('onclick', 'quarto()');
 
-//     document.getElementById("button").setAttribute('onclick', 'salario()');
-// }
+    document.getElementById("titulo-exercicio").innerHTML = "Exercicio 3 - Reajuste Salarial";
+    document.getElementById("texto-exercicio").innerHTML = "Lê o salário atual e o reajuste, e exibe o novo salário.";
 
-// let salarioAtual, reajuste, novoSalario = 0;
+    document.getElementById("button").setAttribute('onclick', 'salario()');
+}
 
-// function salario() {
-//     salarioAtual = parseInt(prompt("Digite o salário mensal atual:"));
-//     reajuste = parseInt(prompt("Digite o percentual de reajuste:"));
+let salarioAtual, reajuste, novoSalario = 0;
 
-//     novoSalario = salarioAtual + (salarioAtual * reajuste / 100);
+function salario() {
+    salarioAtual = parseInt(prompt("Digite o salário mensal atual:"));
+    reajuste = parseInt(prompt("Digite o percentual de reajuste:"));
 
-//     document.getElementById("resultado").innerHTML = (`O novo salário será de: R$${novoSalario.toFixed(2)}`);
-// }
+    novoSalario = salarioAtual + (salarioAtual * reajuste / 100);
 
+    document.getElementById("resultado").innerHTML = (`O novo salário será de: R$${novoSalario.toFixed(2)}`);
+}
 
 
 
 
 
-// // ------- Exercicio 4 ----------
 
-// // O custo de um carro novo ao consumidor é a soma do custo de fábrica com a porcentagem do distribuidor 
-// // e dos impostos (aplicados ao custo de fábrica). Supondo que o percentual do distribuidor seja de 28% 
-// // e os impostos de 45%, escrever um algoritmo para ler o custo de fábrica de um carro, calcular e escrever
-// // o custo final ao consumidor. 
+// ------- Exercicio 4 ----------
 
-// function quarto() {
-//     document.getElementById("resultado").innerHTML = ("");
+// O custo de um carro novo ao consumidor é a soma do custo de fábrica com a porcentagem do distribuidor 
+// e dos impostos (aplicados ao custo de fábrica). Supondo que o percentual do distribuidor seja de 28% 
+// e os impostos de 45%, escrever um algoritmo para ler o custo de fábrica de um carro, calcular e escrever
+// o custo final ao consumidor. 
 
-//     document.getElementById("anterior").setAttribute('onclick', 'terceiro()');
-//     document.getElementById("proximo").setAttribute('onclick', 'quinto()');
+function quarto() {
+    document.getElementById("resultado").innerHTML = ("");
 
-//     document.getElementById("titulo-exercicio").innerHTML = "Exercicio 4 - Custo de um carro novo";
-//     document.getElementById("texto-exercicio").innerHTML = "Lê o custo de fábrica e exibe o valor final ao consumidor.";
+    document.getElementById("anterior").setAttribute('onclick', 'terceiro()');
+    document.getElementById("proximo").setAttribute('onclick', 'quinto()');
 
-//     document.getElementById("button").setAttribute('onclick', 'carro()');
-// }
+    document.getElementById("titulo-exercicio").innerHTML = "Exercicio 4 - Custo de um carro novo";
+    document.getElementById("texto-exercicio").innerHTML = "Lê o custo de fábrica e exibe o valor final ao consumidor.";
 
-// let valorFabrica, valorFinal = 0;
-// const porcDistribuidor = 28;
-// const impostos = 45;
+    document.getElementById("button").setAttribute('onclick', 'carro()');
+}
 
-// function carro() {
+let valorFabrica, valorFinal = 0;
+const porcDistribuidor = 28;
+const impostos = 45;
 
-//     valorFabrica = parseFloat(prompt("Digite o valor de fábrica do veículo:"));
+function carro() {
 
-//     valorFinal = valorFabrica + (valorFabrica * porcDistribuidor / 100) + (valorFabrica * impostos / 100);
+    valorFabrica = parseFloat(prompt("Digite o valor de fábrica do veículo:"));
 
-//     document.getElementById("resultado").innerHTML = (`O valor final do carro será de: R$${valorFinal.toFixed(2)}`);
+    valorFinal = valorFabrica + (valorFabrica * porcDistribuidor / 100) + (valorFabrica * impostos / 100);
 
+    document.getElementById("resultado").innerHTML = (`O valor final do carro será de: R$${valorFinal.toFixed(2)}`);
 
-// }
 
+}
 
 
 
 
 
 
-// // ------- Exercicio 5 ----------
 
-// // Ler uma temperatura em graus Celsius e apresentá-la convertida em graus Fahrenheit. 
-// // A fórmula de conversão é F = (C/5)*9+32, sendo F a temperatura em Fahrenheit e C a temperatura em Celsius. 
+// ------- Exercicio 5 ----------
 
-// function quinto() {
-//     document.getElementById("resultado").innerHTML = ("");
+// Ler uma temperatura em graus Celsius e apresentá-la convertida em graus Fahrenheit. 
+// A fórmula de conversão é F = (C/5)*9+32, sendo F a temperatura em Fahrenheit e C a temperatura em Celsius. 
 
-//     document.getElementById("anterior").setAttribute('onclick', 'quarto()');
-//     document.getElementById("proximo").setAttribute('onclick', 'sexto()');
+function quinto() {
+    document.getElementById("resultado").innerHTML = ("");
 
-//     document.getElementById("titulo-exercicio").innerHTML = "Exercicio 5 - Conversor de temperatura";
-//     document.getElementById("texto-exercicio").innerHTML = "Lê a temperatura em graus Celsius e exibe a mesma em graus Fahrenheit.";
+    document.getElementById("anterior").setAttribute('onclick', 'quarto()');
+    document.getElementById("proximo").setAttribute('onclick', 'sexto()');
 
-//     document.getElementById("button").setAttribute('onclick', 'celsius()');
-// }
+    document.getElementById("titulo-exercicio").innerHTML = "Exercicio 5 - Conversor de temperatura";
+    document.getElementById("texto-exercicio").innerHTML = "Lê a temperatura em graus Celsius e exibe a mesma em graus Fahrenheit.";
 
-// let grausCelsius, grausFahrenheit = 0;
+    document.getElementById("button").setAttribute('onclick', 'celsius()');
+}
 
-// function celsius() {
+let grausCelsius, grausFahrenheit = 0;
 
-//     grausCelsius = parseFloat(prompt("Digite a quantidade de graus Celsius:"))
+function celsius() {
 
-//     grausFahrenheit = (grausCelsius / 5) * 9 + 32;
+    grausCelsius = parseFloat(prompt("Digite a quantidade de graus Celsius:"))
 
-//     document.getElementById("resultado").innerHTML = (`Graus Celsius: ${grausCelsius}°C 
-//                                                         Graus Fahrenheit: ${grausFahrenheit}°F`);
+    grausFahrenheit = (grausCelsius / 5) * 9 + 32;
 
-// }
+    document.getElementById("resultado").innerHTML = (`Graus Celsius: ${grausCelsius}°C 
+                                                        Graus Fahrenheit: ${grausFahrenheit}°F`);
 
+}
 
 
 
 
 
-// // ------- Exercicio 6 ----------
 
-// // Ler uma temperatura em graus Fahrenheit e apresentá-la convertida em graus Celsius. 
-// // A fórmula de conversão é C=(F-32) *(5/9), sendo F a temperatura em Fahrenheit e C a temperatura em Celsius.
+// ------- Exercicio 6 ----------
 
-// function sexto() {
-//     document.getElementById("resultado").innerHTML = ("");
+// Ler uma temperatura em graus Fahrenheit e apresentá-la convertida em graus Celsius. 
+// A fórmula de conversão é C=(F-32) *(5/9), sendo F a temperatura em Fahrenheit e C a temperatura em Celsius.
 
-//     document.getElementById("anterior").setAttribute('onclick', 'quinto()');
-//     document.getElementById("proximo").setAttribute('onclick', 'setimo()');
+function sexto() {
+    document.getElementById("resultado").innerHTML = ("");
 
-//     document.getElementById("titulo-exercicio").innerHTML = "Exercicio 6 - Conversor de temperatura";
-//     document.getElementById("texto-exercicio").innerHTML = "Lê a temperatura em graus Fahrenheit e exibe a mesma em graus Celsius.";
+    document.getElementById("anterior").setAttribute('onclick', 'quinto()');
+    document.getElementById("proximo").setAttribute('onclick', 'setimo()');
 
-//     document.getElementById("button").setAttribute('onclick', 'fahrenheit()');
-// }
+    document.getElementById("titulo-exercicio").innerHTML = "Exercicio 6 - Conversor de temperatura";
+    document.getElementById("texto-exercicio").innerHTML = "Lê a temperatura em graus Fahrenheit e exibe a mesma em graus Celsius.";
 
-// // Variáveis já declaradas no exercicio anterior como 0
+    document.getElementById("button").setAttribute('onclick', 'fahrenheit()');
+}
 
-// function fahrenheit() {
+// Variáveis já declaradas no exercicio anterior como 0
 
-//     grausFahrenheit = parseFloat(prompt("Digite a quantidade de graus Fahrenheit:"))
+function fahrenheit() {
 
-//     grausCelsius = (grausFahrenheit - 32) * (5 / 9);
+    grausFahrenheit = parseFloat(prompt("Digite a quantidade de graus Fahrenheit:"))
 
-//     document.getElementById("resultado").innerHTML = (`Graus Fahrenheit: ${grausFahrenheit}°C 
-//                                                         Graus Celsius: ${grausCelsius}°F`);
-// }
+    grausCelsius = (grausFahrenheit - 32) * (5 / 9);
 
+    document.getElementById("resultado").innerHTML = (`Graus Fahrenheit: ${grausFahrenheit}°C 
+                                                        Graus Celsius: ${grausCelsius}°F`);
+}
 
 
 
-// // ------- Exercicio 7 ----------
 
-// // Calcular e apresentar o valor do volume de uma lata de óleo, utilizando a fórmula: Volume = π*Raio2*Altura 
+// ------- Exercicio 7 ----------
 
-// function setimo() {
-//     document.getElementById("resultado").innerHTML = ("");
+// Calcular e apresentar o valor do volume de uma lata de óleo, utilizando a fórmula: Volume = π*Raio2*Altura 
 
-//     document.getElementById("anterior").setAttribute('onclick', 'sexto()');
-//     document.getElementById("proximo").setAttribute('onclick', 'oitavo()');
+function setimo() {
+    document.getElementById("resultado").innerHTML = ("");
 
-//     document.getElementById("titulo-exercicio").innerHTML = "Exercicio 7 - Volume da lata de óleo";
-//     document.getElementById("texto-exercicio").innerHTML = "Lê o raio e a altura da lata de óleo e exibe seu volume.";
+    document.getElementById("anterior").setAttribute('onclick', 'sexto()');
+    document.getElementById("proximo").setAttribute('onclick', 'oitavo()');
 
-//     document.getElementById("button").setAttribute('onclick', 'lataOleo()');
-// }
+    document.getElementById("titulo-exercicio").innerHTML = "Exercicio 7 - Volume da lata de óleo";
+    document.getElementById("texto-exercicio").innerHTML = "Lê o raio e a altura da lata de óleo e exibe seu volume.";
 
-// let raio, altura, volume = 0;
+    document.getElementById("button").setAttribute('onclick', 'lataOleo()');
+}
 
-// function lataOleo() {
+let raio, altura, volume = 0;
 
-//     raio = parseFloat(prompt("Digite o raio da lata:"));
-//     altura = parseFloat(prompt("Digite a altura da lata:"));
+function lataOleo() {
 
-//     volume = Math.PI.toFixed(2) * Math.pow(raio, 2) * altura;
+    raio = parseFloat(prompt("Digite o raio da lata:"));
+    altura = parseFloat(prompt("Digite a altura da lata:"));
 
-//     document.getElementById("resultado").innerHTML = (`O volume da lata de óleo é: ${volume.toFixed(2)}`);
+    volume = Math.PI.toFixed(2) * Math.pow(raio, 2) * altura;
 
-// }
+    document.getElementById("resultado").innerHTML = (`O volume da lata de óleo é: ${volume.toFixed(2)}`);
+
+}
 
 
 
@@ -276,17 +277,17 @@
 // Ao final, o programa deve apresentar os valores da velocidade média (VELOCIDADE), tempo gasto na viagem (TEMPO), a distância percorrida (DISTÂNCIA) 
 // e a quantidade de litros (LITROS_USADOS) utilizada na viagem.  
 
-// function setimo(){
-document.getElementById("resultado").innerHTML = ("");
+function oitavo() {
+    document.getElementById("resultado").innerHTML = ("");
 
-document.getElementById("anterior").setAttribute('onclick', 'setimo()');
-document.getElementById("proximo").setAttribute('onclick', 'nono()');
+    document.getElementById("anterior").setAttribute('onclick', 'setimo()');
+    document.getElementById("proximo").setAttribute('onclick', 'nono()');
 
-document.getElementById("titulo-exercicio").innerHTML = "Exercicio 8 - Combustível gasto";
-document.getElementById("texto-exercicio").innerHTML = "Lê o tempo gasto na viagem e a velocidade média e exibe a quantidade de combustível gasto.";
+    document.getElementById("titulo-exercicio").innerHTML = "Exercicio 8 - Combustível gasto";
+    document.getElementById("texto-exercicio").innerHTML = "Lê o tempo gasto na viagem e a velocidade média e exibe a quantidade de combustível gasto.";
 
-document.getElementById("button").setAttribute('onclick', 'viagem()');
-// }
+    document.getElementById("button").setAttribute('onclick', 'viagem()');
+}
 
 let tempo, velocidade, distancia, litrosUsados = 0;
 const consumoKM = 12;
@@ -298,12 +299,80 @@ function viagem() {
 
     distancia = tempo * velocidade;
 
-    litrosUsados = distancia/consumoKM;
+    litrosUsados = distancia / consumoKM;
 
     document.getElementById("resultado").innerHTML = (`Velocidade Média: ${velocidade}Km/h
                                                         Tempo gasto na viagem: ${tempo}h
                                                         Distância percorrida: ${distancia}Km
                                                         Combustível usado: ${litrosUsados}L`);
+}
 
 
+
+
+
+// ------- Exercicio 9 ----------
+
+// Efetuar o cálculo e a apresentação do valor de uma prestação em atraso,
+//  utilizando a fórmula PRESTACAO=VALOR+((VALOR*TAXA/100) *TEMPO) 
+
+function nono() {
+    document.getElementById("resultado").innerHTML = ("");
+
+    document.getElementById("anterior").setAttribute('onclick', 'oitavo()');
+    document.getElementById("proximo").setAttribute('onclick', 'decimo()');
+
+    document.getElementById("titulo-exercicio").innerHTML = "Exercicio 9 - Prestação em atraso";
+    document.getElementById("texto-exercicio").innerHTML = "Lê o valor inicial de um prestação e apresenta seu valor com juros de atraso.";
+
+    document.getElementById("button").setAttribute('onclick', 'prestacao()');
+}
+
+
+function prestacao() {
+
+    let valorInicial = parseFloat(prompt("Digite o valor inicial da fatura:"));
+    let tempo = parseInt(prompt("Digite o total de dias de atraso da fatura:"));
+    let taxa = parseFloat(prompt("Digite a taxa de atraso diária:"));
+
+    let valorJuros = valorInicial + ((valorInicial * taxa / 100) * tempo);
+
+    document.getElementById("resultado").innerHTML = (`Valor incial: R$ ${valorInicial.toFixed(2)}
+                                                            Tempo de atraso: ${tempo} dias
+                                                            Taxa diária de juros: ${taxa}%
+                                                            Valor final comjuros: R$ ${valorJuros.toFixed(2)}`);
+}
+
+
+
+
+// ------- Exercicio 10 ----------
+
+// Efetuar o cálculo e a apresentação do valor de uma prestação em atraso,
+//  utilizando a fórmula PRESTACAO=VALOR+((VALOR*TAXA/100) *TEMPO) 
+
+function decimo() {
+    document.getElementById("resultado").innerHTML = ("");
+
+    document.getElementById("anterior").setAttribute('onclick', 'nono()');
+    document.getElementById("proximo").setAttribute('onclick', 'alert(`Este é o último exercício`)');
+
+    document.getElementById("titulo-exercicio").innerHTML = "Exercicio 10 - Troca de valores";
+    document.getElementById("texto-exercicio").innerHTML = "Lê dois valores e os troca de posição.";
+
+    document.getElementById("button").setAttribute('onclick', 'trocar()');
+}
+
+
+function trocar() {
+
+    let a = prompt("Digite o valor para A:");
+    let b = prompt("Digite o valor para B:");
+    let c = a;
+
+    document.getElementById("resultado").innerHTML = (`A : ${a}
+                                                            B : ${b}
+                                                            Troca
+                                                            A : ${a = b}
+                                                            B : ${c}`);
 }
