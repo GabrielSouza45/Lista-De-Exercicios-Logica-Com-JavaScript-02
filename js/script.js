@@ -1,8 +1,11 @@
-// ------- Exercicio 1 ----------
+// // ------- Exercicio 1 ----------
 
-// Faça um algoritmo que leia a idade de uma pessoa expressa em anos, meses e dias e escreva a idade dessa 
-// pessoa expressa apenas em dias. Considerar ano com 365 dias e mês com 30 dias.  
+// // Faça um algoritmo que leia a idade de uma pessoa expressa em anos, meses e dias e escreva a idade dessa 
+// // pessoa expressa apenas em dias. Considerar ano com 365 dias e mês com 30 dias. 
+// document.getElementById("resultado").innerHTML = ("");
 // function diasVividos() {
+
+
 //     let diaTotal = 0;
 
 //     let anos = parseInt(prompt("Digite o ano em que nasceu:"));
@@ -40,19 +43,23 @@
 
 
 
-// ------- Exercicio 2 ----------
 
-// Escreva um algoritmo para ler o número total de eleitores de um município, o número de votos brancos, nulos e válidos. 
-// Calcular e escrever o percentual que cada um representa em relação ao total de eleitores.  
 
-// function segundo(){
-// document.getElementById("anterior").setAttribute('onclick', 'primeiro()');
-// document.getElementById("proximo").setAttribute('onclick', 'terceiro()');
+// // ------- Exercicio 2 ----------
 
-// document.getElementById("titulo-exercicio").innerHTML = "Exercicio 2 - Percentual de Votos";
-// document.getElementById("texto-exercicio").innerHTML = "Lê votos nulos, brancos e válidos e escreve o percentual de cada eleitor";
+// // Escreva um algoritmo para ler o número total de eleitores de um município, o número de votos brancos, nulos e válidos. 
+// // Calcular e escrever o percentual que cada um representa em relação ao total de eleitores.  
 
-// document.getElementById("button").setAttribute('onclick', 'votos()');
+// function segundo() {
+//     document.getElementById("resultado").innerHTML = ("");
+
+//     document.getElementById("anterior").setAttribute('onclick', 'primeiro()');
+//     document.getElementById("proximo").setAttribute('onclick', 'terceiro()');
+
+//     document.getElementById("titulo-exercicio").innerHTML = "Exercicio 2 - Percentual de Votos";
+//     document.getElementById("texto-exercicio").innerHTML = "Lê votos nulos, brancos e válidos e escreve o percentual de cada eleitor";
+
+//     document.getElementById("button").setAttribute('onclick', 'votos()');
 // }
 
 // function primeiro() {
@@ -85,21 +92,218 @@
 
 
 
-// ------- Exercicio 3 ----------
 
-// Escreva um algoritmo para ler o salário mensal atual de um funcionário
-// e o percentual de reajuste. Calcular e escrever o valor do novo salário.
 
-// function segundo(){
-// document.getElementById("anterior").setAttribute('onclick', 'segundo()');
-// document.getElementById("proximo").setAttribute('onclick', 'quarto()');
 
-// document.getElementById("titulo-exercicio").innerHTML = "Exercicio 3 - Reajuste Salarial";
-// document.getElementById("texto-exercicio").innerHTML = "Lê o salário atual";
+// // ------- Exercicio 3 ----------
 
-// document.getElementById("button").setAttribute('onclick', 'votos()');
-// // }
+// // Escreva um algoritmo para ler o salário mensal atual de um funcionário
+// // e o percentual de reajuste. Calcular e escrever o valor do novo salário.
 
-// function primeiro() {
-//     location.reload(true);
+// function terceiro() {
+//     document.getElementById("resultado").innerHTML = ("");
+
+//     document.getElementById("anterior").setAttribute('onclick', 'segundo()');
+//     document.getElementById("proximo").setAttribute('onclick', 'quarto()');
+
+//     document.getElementById("titulo-exercicio").innerHTML = "Exercicio 3 - Reajuste Salarial";
+//     document.getElementById("texto-exercicio").innerHTML = "Lê o salário atual e o reajuste, e exibe o novo salário.";
+
+//     document.getElementById("button").setAttribute('onclick', 'salario()');
 // }
+
+// let salarioAtual, reajuste, novoSalario = 0;
+
+// function salario() {
+//     salarioAtual = parseInt(prompt("Digite o salário mensal atual:"));
+//     reajuste = parseInt(prompt("Digite o percentual de reajuste:"));
+
+//     novoSalario = salarioAtual + (salarioAtual * reajuste / 100);
+
+//     document.getElementById("resultado").innerHTML = (`O novo salário será de: R$${novoSalario.toFixed(2)}`);
+// }
+
+
+
+
+
+
+// // ------- Exercicio 4 ----------
+
+// // O custo de um carro novo ao consumidor é a soma do custo de fábrica com a porcentagem do distribuidor 
+// // e dos impostos (aplicados ao custo de fábrica). Supondo que o percentual do distribuidor seja de 28% 
+// // e os impostos de 45%, escrever um algoritmo para ler o custo de fábrica de um carro, calcular e escrever
+// // o custo final ao consumidor. 
+
+// function quarto() {
+//     document.getElementById("resultado").innerHTML = ("");
+
+//     document.getElementById("anterior").setAttribute('onclick', 'terceiro()');
+//     document.getElementById("proximo").setAttribute('onclick', 'quinto()');
+
+//     document.getElementById("titulo-exercicio").innerHTML = "Exercicio 4 - Custo de um carro novo";
+//     document.getElementById("texto-exercicio").innerHTML = "Lê o custo de fábrica e exibe o valor final ao consumidor.";
+
+//     document.getElementById("button").setAttribute('onclick', 'carro()');
+// }
+
+// let valorFabrica, valorFinal = 0;
+// const porcDistribuidor = 28;
+// const impostos = 45;
+
+// function carro() {
+
+//     valorFabrica = parseFloat(prompt("Digite o valor de fábrica do veículo:"));
+
+//     valorFinal = valorFabrica + (valorFabrica * porcDistribuidor / 100) + (valorFabrica * impostos / 100);
+
+//     document.getElementById("resultado").innerHTML = (`O valor final do carro será de: R$${valorFinal.toFixed(2)}`);
+
+
+// }
+
+
+
+
+
+
+
+// // ------- Exercicio 5 ----------
+
+// // Ler uma temperatura em graus Celsius e apresentá-la convertida em graus Fahrenheit. 
+// // A fórmula de conversão é F = (C/5)*9+32, sendo F a temperatura em Fahrenheit e C a temperatura em Celsius. 
+
+// function quinto() {
+//     document.getElementById("resultado").innerHTML = ("");
+
+//     document.getElementById("anterior").setAttribute('onclick', 'quarto()');
+//     document.getElementById("proximo").setAttribute('onclick', 'sexto()');
+
+//     document.getElementById("titulo-exercicio").innerHTML = "Exercicio 5 - Conversor de temperatura";
+//     document.getElementById("texto-exercicio").innerHTML = "Lê a temperatura em graus Celsius e exibe a mesma em graus Fahrenheit.";
+
+//     document.getElementById("button").setAttribute('onclick', 'celsius()');
+// }
+
+// let grausCelsius, grausFahrenheit = 0;
+
+// function celsius() {
+
+//     grausCelsius = parseFloat(prompt("Digite a quantidade de graus Celsius:"))
+
+//     grausFahrenheit = (grausCelsius / 5) * 9 + 32;
+
+//     document.getElementById("resultado").innerHTML = (`Graus Celsius: ${grausCelsius}°C 
+//                                                         Graus Fahrenheit: ${grausFahrenheit}°F`);
+
+// }
+
+
+
+
+
+
+// // ------- Exercicio 6 ----------
+
+// // Ler uma temperatura em graus Fahrenheit e apresentá-la convertida em graus Celsius. 
+// // A fórmula de conversão é C=(F-32) *(5/9), sendo F a temperatura em Fahrenheit e C a temperatura em Celsius.
+
+// function sexto() {
+//     document.getElementById("resultado").innerHTML = ("");
+
+//     document.getElementById("anterior").setAttribute('onclick', 'quinto()');
+//     document.getElementById("proximo").setAttribute('onclick', 'setimo()');
+
+//     document.getElementById("titulo-exercicio").innerHTML = "Exercicio 6 - Conversor de temperatura";
+//     document.getElementById("texto-exercicio").innerHTML = "Lê a temperatura em graus Fahrenheit e exibe a mesma em graus Celsius.";
+
+//     document.getElementById("button").setAttribute('onclick', 'fahrenheit()');
+// }
+
+// // Variáveis já declaradas no exercicio anterior como 0
+
+// function fahrenheit() {
+
+//     grausFahrenheit = parseFloat(prompt("Digite a quantidade de graus Fahrenheit:"))
+
+//     grausCelsius = (grausFahrenheit - 32) * (5 / 9);
+
+//     document.getElementById("resultado").innerHTML = (`Graus Fahrenheit: ${grausFahrenheit}°C 
+//                                                         Graus Celsius: ${grausCelsius}°F`);
+// }
+
+
+
+
+// // ------- Exercicio 7 ----------
+
+// // Calcular e apresentar o valor do volume de uma lata de óleo, utilizando a fórmula: Volume = π*Raio2*Altura 
+
+// function setimo() {
+//     document.getElementById("resultado").innerHTML = ("");
+
+//     document.getElementById("anterior").setAttribute('onclick', 'sexto()');
+//     document.getElementById("proximo").setAttribute('onclick', 'oitavo()');
+
+//     document.getElementById("titulo-exercicio").innerHTML = "Exercicio 7 - Volume da lata de óleo";
+//     document.getElementById("texto-exercicio").innerHTML = "Lê o raio e a altura da lata de óleo e exibe seu volume.";
+
+//     document.getElementById("button").setAttribute('onclick', 'lataOleo()');
+// }
+
+// let raio, altura, volume = 0;
+
+// function lataOleo() {
+
+//     raio = parseFloat(prompt("Digite o raio da lata:"));
+//     altura = parseFloat(prompt("Digite a altura da lata:"));
+
+//     volume = Math.PI.toFixed(2) * Math.pow(raio, 2) * altura;
+
+//     document.getElementById("resultado").innerHTML = (`O volume da lata de óleo é: ${volume.toFixed(2)}`);
+
+// }
+
+
+
+
+// ------- Exercicio 8 ----------
+
+// Efetuar o cálculo da quantidade de litros de combustível gasta em uma viagem, utilizando um automóvel que faz 12 Km por litro.
+// Para obter o cálculo, o usuário deve fornecer o tempo gasto (TEMPO) e a velocidade média (VELOCIDADE) durante a viagem. 
+// Desta forma, será possível obter a distância percorrida com a fórmula DISTANCIA=TEMPO * VELOCIDADE. 
+// Possuindo o valor da distância, basta calcular a quantidade de litros de combustível utilizada na viagem com a fórmula LITROS_USADOS=DISTÂNCIA/12. 
+// Ao final, o programa deve apresentar os valores da velocidade média (VELOCIDADE), tempo gasto na viagem (TEMPO), a distância percorrida (DISTÂNCIA) 
+// e a quantidade de litros (LITROS_USADOS) utilizada na viagem.  
+
+// function setimo(){
+document.getElementById("resultado").innerHTML = ("");
+
+document.getElementById("anterior").setAttribute('onclick', 'setimo()');
+document.getElementById("proximo").setAttribute('onclick', 'nono()');
+
+document.getElementById("titulo-exercicio").innerHTML = "Exercicio 8 - Combustível gasto";
+document.getElementById("texto-exercicio").innerHTML = "Lê o tempo gasto na viagem e a velocidade média e exibe a quantidade de combustível gasto.";
+
+document.getElementById("button").setAttribute('onclick', 'viagem()');
+// }
+
+let tempo, velocidade, distancia, litrosUsados = 0;
+const consumoKM = 12;
+
+function viagem() {
+
+    tempo = parseFloat(prompt("Digite o tempo gasto na viagem em horas:"));
+    velocidade = parseFloat(prompt("Digite a velocidade média do veículo em Km/h:"));
+
+    distancia = tempo * velocidade;
+
+    litrosUsados = distancia/consumoKM;
+
+    document.getElementById("resultado").innerHTML = (`Velocidade Média: ${velocidade}Km/h
+                                                        Tempo gasto na viagem: ${tempo}h
+                                                        Distância percorrida: ${distancia}Km
+                                                        Combustível usado: ${litrosUsados}L`);
+
+
+}
